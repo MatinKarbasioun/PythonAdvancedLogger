@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import advanceLogger
-from advanceLogger import ElasticSearchConf
+from advancedLogger import ElasticSearchConf
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,12 +43,12 @@ LOGGING = {
             "format": "%(asctime)s %(created)f %(filename)s %(funcName)s %(levelname)s %(levelno)s %(lineno)d %(module)s"
                       " %(name)s %(levelname)s %(message)s %(pathname)s",
             "datefmt": "%Y-%m-%dT%H:%M:%S%z",
-            "class": "advanceLogger.AdvanceLogFormatter"
+            "class": "advancedLogger.AdvancedLogFormatter"
         }
     },
     "handlers": {
         "console": {
-            "class": "advanceLogger.AdvanceLogHandler",
+            "class": "advancedLogger.AdvancedLogHandler",
             "formatter": "advance_logger",
             "els_conf": elsConf
         }
